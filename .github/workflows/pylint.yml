@@ -18,6 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-    - name: Analysing the code with pylint
+    - name: Run unittests
       run: |
-        pylint $(git ls-files '*.py')
+        echo hola mundo
+        python -m unittest tic_tac_toe_tests.py
