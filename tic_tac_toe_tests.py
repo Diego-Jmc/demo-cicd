@@ -5,6 +5,9 @@ def print_board(board):
         print(" | ".join(row))
         print("-" * 5)
 
+def suma(a, b):
+    return a + b
+
 def check_winner(board, player):
     # Check filas
     for row in board:
@@ -42,6 +45,17 @@ class TestTicTacToe(unittest.TestCase):
             ['O', 'X', 'O']
         ]
         self.assertTrue(is_full(board))
+
+
+
+class TestSumaFunction(unittest.TestCase):
+
+    def test_suma_positivos(self):
+        self.assertEqual(suma(3, 5), 10)
+    
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
